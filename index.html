@@ -21,9 +21,8 @@
               {text:'build an angular app', done:false}];
           
           $http.get('hadoop-summit.json')
-          .success(function(res){
-                    $scope.tracks = res.data;
-                    console.log(res.data);       
+          .success(function(data){
+                    $scope.tracks = data;
           });
      }
       
