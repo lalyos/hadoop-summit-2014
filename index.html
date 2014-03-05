@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en" ng-app>
+  <head>
+    <meta charset="utf-8">
+
+    <title>Hadoop Summit 2014</title>
+
+    <style>
+    body {
+      padding-top: 50px;
+    }
+    </style>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.10/angular.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap.min.js"></script>
+    <script>
+     function SummitController($scope,$http) {
+          $scope.todos = [{text:'learn angular', done:true},
+              {text:'build an angular app', done:false}];
+          
+          $scope.tracks =     [
+                {
+                  "description": "HBase is used widely at Facebook and one of the biggest usecase is Facebook Messages. With a billion users there are a lot of reliability and performance challenges on both HBase and HDFS. HDFS was originally designed for a batch processing system like MapReduce/Hive. A realtime usecase like Facebook Messages where the p99 latency can`t be more than a couple hundreds of milliseconds poses a lot of challenges for HDFS. In this talk we will share the work the HDFS team at Facebook has done to support a realtime usecase like Facebook Messages : (1) Using system calls to tune performance; (2) Inline checksums to reduce iops by 40%; (3) Reducing the p99 for read and write latencies by about 10x; (4) Tools used to determine root cause of outliers. We will discuss the details of each technique, the challenges we faced, lessons learned and results showing the impact of each improvement.",
+                  "speaker": "Pritam Damania",
+                  "title": "Putting wings on the Elephant",
+                  "type": "operating-hadoop"
+                },
+                {
+                  "description": "Iconsulting developed a solution for Retail based on Hadoop technology that enables Market Basket Analysis of large volume of receipts data. This solution supports an important Italian company leader in the Fashion industry to discover and analyse recurring purchases patterns on customer sales. Now business users can deeply investigate on the effectiveness of promotion and advertising campaigns and figure out whether shop windows layouts and in-store clothes reach desired goals. Through a friendly web-based interface, the solution allows users to perform real-time queries on Big Data and analyse patterns of purchases with graphs and tables embedded in Business Intelligence (BI) interactive dashboards. Hadoop framework is used to read data matching desired criteria of users who interact through filters loaded directly from the Enterprise Data Warehouse (more than 100 million records at the detail level of the single receipt line). Data are processed using a specifically designed algorithm for Market Basket Analysis and then the outcome goes back to the BI platform. A live demonstration will deeply explain the technological stack composed by the Hadoop-based framework in this solution and the transparent interaction between Hadoop Cluster and Business Intelligence platform.",
+                  "speaker": "Simone Ferruzzi, Marco Mantovani",
+                  "title": "Real-Time Market Basket Analysis for Retail with Hadoop",
+                  "type": "hadoop-apps"
+                },
+                {
+                  "description": "How can business and IT users easily explore, analyse and visualise data in Hadoop? There are alternatives to manually writing jobs or setting up predefined schemas. Learn firsthand how a leading enterprise used Splunk and their Hadoop distribution to empower the organisation with new access to Hadoop data. See how they got up and running in under an hour and enabled their developers to start writing big data apps.",
+                  "speaker": "Brett Sheppard",
+                  "title": "Turn Hadoop Data into Business Insights: A New Approach for Rapid Exploration and Analysis",
+                  "type": "sponsor-talks"
+                },
+                {
+                  "description": "Apache Hive is the most widely used SQL interface for Hadoop. Over the last year the Hive community has done a tremendous amount of work. Hive 0.12 runs 40x faster than Hive 0.10. Datatypes such as DATE, VARCHAR, and CHAR have been added. Support for subqueries in the WHERE clause is being added. A cost based optimizer is being developed. Hive?s execution is being reworked to take full advantage of YARN and Tez, moving it beyond the confines of MapReduce. New file formats such as ORC are providing tighter compression and faster read times. This talk will discuss the feature and performance improvements that have been done, show benchmarks that measure performance improvements so far, look at ongoing work, and discuss future directions for the project.",
+                  "speaker": "Alan Gates",
+                  "title": "Making Hive Suitable for Analytics Workloads",
+                  "type": "hadoop-futures"
+                }];
+          // $http.get('hadoop-summit.json')
+          // .success(function(res){
+          //           $scope.tracks = res.data;
+          //           log(res.data);            
+          // });
+     }
+      
+    </script>
+    
+  </head>
+
+  <body ng-controller="SummitController">
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Hadoop Summit 2014</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container">
+      <h3>Tracks</h3>
+      <div>
+        <ul ng-repeat="track in tracks">
+          <li>{{track.title}}</li>
+        </ul>
+      </div>
+    </div><!-- /.container -->
+
+  </body>
+</html>

@@ -1,0 +1,350 @@
+[
+  {
+    "description": "HBase is used widely at Facebook and one of the biggest usecase is Facebook Messages. With a billion users there are a lot of reliability and performance challenges on both HBase and HDFS. HDFS was originally designed for a batch processing system like MapReduce/Hive. A realtime usecase like Facebook Messages where the p99 latency can`t be more than a couple hundreds of milliseconds poses a lot of challenges for HDFS. In this talk we will share the work the HDFS team at Facebook has done to support a realtime usecase like Facebook Messages : (1) Using system calls to tune performance; (2) Inline checksums to reduce iops by 40%; (3) Reducing the p99 for read and write latencies by about 10x; (4) Tools used to determine root cause of outliers. We will discuss the details of each technique, the challenges we faced, lessons learned and results showing the impact of each improvement.",
+    "speaker": "Pritam Damania",
+    "title": "Putting wings on the Elephant",
+    "type": "operating-hadoop"
+  },
+  {
+    "description": "Iconsulting developed a solution for Retail based on Hadoop technology that enables Market Basket Analysis of large volume of receipts data. This solution supports an important Italian company leader in the Fashion industry to discover and analyse recurring purchases patterns on customer sales. Now business users can deeply investigate on the effectiveness of promotion and advertising campaigns and figure out whether shop windows layouts and in-store clothes reach desired goals. Through a friendly web-based interface, the solution allows users to perform real-time queries on Big Data and analyse patterns of purchases with graphs and tables embedded in Business Intelligence (BI) interactive dashboards. Hadoop framework is used to read data matching desired criteria of users who interact through filters loaded directly from the Enterprise Data Warehouse (more than 100 million records at the detail level of the single receipt line). Data are processed using a specifically designed algorithm for Market Basket Analysis and then the outcome goes back to the BI platform. A live demonstration will deeply explain the technological stack composed by the Hadoop-based framework in this solution and the transparent interaction between Hadoop Cluster and Business Intelligence platform.",
+    "speaker": "Simone Ferruzzi, Marco Mantovani",
+    "title": "Real-Time Market Basket Analysis for Retail with Hadoop",
+    "type": "hadoop-apps"
+  },
+  {
+    "description": "How can business and IT users easily explore, analyse and visualise data in Hadoop? There are alternatives to manually writing jobs or setting up predefined schemas. Learn firsthand how a leading enterprise used Splunk and their Hadoop distribution to empower the organisation with new access to Hadoop data. See how they got up and running in under an hour and enabled their developers to start writing big data apps.",
+    "speaker": "Brett Sheppard",
+    "title": "Turn Hadoop Data into Business Insights: A New Approach for Rapid Exploration and Analysis",
+    "type": "sponsor-talks"
+  },
+  {
+    "description": "Apache Hive is the most widely used SQL interface for Hadoop. Over the last year the Hive community has done a tremendous amount of work. Hive 0.12 runs 40x faster than Hive 0.10. Datatypes such as DATE, VARCHAR, and CHAR have been added. Support for subqueries in the WHERE clause is being added. A cost based optimizer is being developed. Hive?s execution is being reworked to take full advantage of YARN and Tez, moving it beyond the confines of MapReduce. New file formats such as ORC are providing tighter compression and faster read times. This talk will discuss the feature and performance improvements that have been done, show benchmarks that measure performance improvements so far, look at ongoing work, and discuss future directions for the project.",
+    "speaker": "Alan Gates",
+    "title": "Making Hive Suitable for Analytics Workloads",
+    "type": "hadoop-futures"
+  },
+  {
+    "description": "As enterprise adoption of Hadoop accelerates, data security capabilities are a critical obstacle and a major concern, because Hadoop lacks a unified and manageable authorization framework across all components in the ecosystem. We discuss our work developing a common token based authentication framework for the entire Hadoop stack that helps integrate traditional identity management and authentication solutions without complicating Hadoop security. Our framework also provides single sign on for user access either via RPC or web interfaces. Based on the token authentication work we provides a unified authorization framework that can consistently enforce authorization and manage policies from a central point of administration. Our framework supports advanced authorization models such as role based access control (RBAC), attribute based access control (ABAC), and mandatory access control (MAC). With an eye toward Hadoop?s evolution into a cloud platform, our framework can support large scale federated multi-tenant deployments. Authentication and authorization rules can be configured and enforced per domain, which allows organizations to manage their individual policies separately while sharing a common large pool of resources.",
+    "speaker": "Tianyou Li",
+    "title": "Token Based Authentication and Unified Authorization for Hadoop",
+    "type": "hadoop-futures"
+  },
+  {
+    "description": "Hadoop is a keystone for Big Data strategies today, but its power is largely focused on transaction capture, bulk ETL/ELT and archiving.  Organizations ready to take Hadoop to the next level to deliver fast answers and sophisticated data services for their data analysts and data scientists are looking for affordable, readily adoptable implementation strategies.  Learn how the end-to-end Actian Analytics Platform, recently described as the “exoskeleton for Hadoop,” enables high-performance analytics and reporting natively in Hadoop – the key to Accelerating Big Data 2.0.",
+    "speaker": "John Santaferraro",
+    "title": "The Scoop on Hadoop: High-Performance Analytics with a “Hadoop Exoskeleton”",
+    "type": "sponsor-talks"
+  },
+  {
+    "description": "Many application in e-commerce need to process data arriving in real time. But when it comes to applications of data mining, data scientists used to exploit algorithms to analyze user behaviors mainly based on offline data, and use data mining models for labeling and segmenting. However, today`s activities in cyber space are more connected than ever before, e-commerce platforms have to meet rapidly changing customer needs, and the time lags of offline analysis become intolerable. In this paper, we propose a novel framework called Pinball which aims to leverage the pre-trained classification models and real-time event processing ability of Storm to predict user?s segmentation and preferences on the fly in order to realize audience targeting. Visitors of e-commerce platform will receive tailored advertising using the prediction result coming from Pinball?s classification models. Both e-commerce platform and users can benefit from the synergy of data mining and stream processing.",
+    "speaker": "Norman Huang, Jason Lin",
+    "title": "Real-time streaming classification with Storm",
+    "type": "data-science"
+  },
+  {
+    "description": "Operating multi-tenant clusters requires careful planning of capacity for on-time launch of big data projects and applications within expected budget and with appropriate SLA guarantees. Making such guarantees with a set of standard hardware configurations is key to operate big data platforms as a hosted service for your organization. This talk highlights the tools, techniques and methodology applied on a per-project or user basis across three primary multi-tenant deployments in the Apache Hadoop ecosystem, namely MapReduce/YARN and HDFS, HBase, and Storm due to the significance of capital investments with increasing scale in data nodes, region servers, and supervisor nodes respectively. We will demo the estimation tools developed for these deployments that can be used for capital planning and forecasting, and cluster resource and SLA management, including making latency and throughput guarantees to individual users and projects. As we discuss the tools, we will share considerations that got incorporated to come up with the most appropriate calculation across these three primary deployments. We will discuss the data sources for calculations, resource drivers for different use cases, and how to plan for optimum capacity allocation per project with respect to given standard hardware configurations.",
+    "speaker": "Sumeet Singh",
+    "title": "Capacity Planning in Multi-tenant Hadoop Deployments",
+    "type": "operating-hadoop"
+  },
+  {
+    "description": "Apache Hive is the de-facto standard for SQL-in-Hadoop today, with more enterprises relying on this open source project than any alternative. Apache Tez is a general-purpose data processing framework on top of YARN. Tez provides high performance out of the box across the spectrum of low latency queries and heavy-weight batch processing. In this talk you will learn how interactive query performance is achieved by bringing the two together. We will explore how techniques like container-reuse, re-localization of resources, sessions, pipelined splits, ORC stripe indexes, PPD, vectorization and more work and contribute to dramatically faster start-up and query execution.",
+    "speaker": "Gunther Hagleitner, Gopal Vijayaraghavan",
+    "title": "Hive + Tez: A performance deep dive",
+    "type": "hadoop-committer"
+  },
+  {
+    "description": "Enterprises are rapidly adopting Hadoop to deal with growing volumes of both unstructured and semi-structured data. Limitations of Hadoop to easily integrate with existing data management systems create a real barrier to unlocking the full potential of Big Data. This session introduces Cascading Lingual, an open source project that provides ANSI compatible SQL enabling fast and simple Big Data application development on Hadoop. Enterprises that have invested millions of dollars in BI tools, such as Pentaho, Jaspersoft and Cognos, and training can now access their data on Hadoop in a matter of hours, rather than weeks. By leveraging the broad platform support of the Cascading application framework, Cascading Lingual lowers the barrier to enterprise application development on Hadoop. Concurrent, Inc.?s Chris Wensel, the author and brain behind Cascading, will take a deep dive into Cascading Lingual. The session will discuss how Cascading Lingual can be used with various tools, like R, and desktop applications to drive improved execution on Big Data strategies by leveraging existing in-house resources, skills sets and product investments. Attendees will learn how data analysts, scientists and developers can now easily work with data stored on Hadoop using their favorite BI tool.",
+    "speaker": "Chris Wensel",
+    "title": "Data Integration and SQL Application Migration with Cascading Lingual",
+    "type": "hadoop-apps"
+  },
+  {
+    "description": "Companies are introducing innovative new products and services to grow their business using more data and new types of data.  Instead of looking at just weeks or months of data, companies are gaining better insight combining years of data with up to the second real-time data.  These big data insights help organizations improve operational efficiency & reduce IT infrastructure costs, better manage customer relationships and create new information related products and services.  This session will describe a process, architecture, and data management platform that leverages Hadoop to turn big data into business value through common big data use-case patterns.",
+    "speaker": "Bert Oosterhof",
+    "title": "Driving Business Innovation with Big Data",
+    "type": "sponsor-talks"
+  },
+  {
+    "description": "Data governance is a critical component of any Hadoop project. Apache Falcon has emerged as the open source project to provide basic capabilities to: – automate movement and processing of data, – tag and filter data as it flows in and out of Hadoop, – set policy driven data lifecycle management for replication and retention, – and also track lineage and metadata for datasets. In this presentation we will provide an overview of Falcon’s capabilities including a live demo showing replication of HDFS/Hive data between two Hadoop clusters.",
+    "speaker": "Seetharam Venkatesh, Srikanth Sundarrajan",
+    "title": "Apache Falcon and Data Governance in Hadoop",
+    "type": "hadoop-futures"
+  },
+  {
+    "description": "Apache Hadoop YARN evolves the Hadoop compute platform from being centered only around MapReduce to being a generic data processing platform that can take advantage of a multitude of programming paradigms all on the same data. In this talk, we?ll talk about the journey of YARN from a concept to being the cornerstone of Hadoop 2 GA releases. We?ll cover the current status of YARN ? how it is faring today and how it stands apart from the monochromatic world that is Hadoop 1.0. We`ll then move on to the exciting future of YARN ? features that are making YARN a first class resource-management platform for enterprise Hadoop ? rolling upgrades, high availability, support for long running services alongside applications, fine-grain isolation for multi-tenancy, preemption, application SLAs, application-history to name a few.",
+    "speaker": "Vinod Kumar Vavilapalli, Siddharth Seth",
+    "title": "Apache Hadoop YARN: Present and Future",
+    "type": "hadoop-futures"
+  },
+  {
+    "description": "To seize the future data must be harnessed in actionable time. You need to achieve instant results and infinite storage. And you can with the SAP and Hadoop. Based on  real deployments learn how you can filter large amounts of data in Hadoop, analyzes it in Real-Time in the SAP HANA platform and visualizes it with tools like SAP Lumira. The SAP HANA platform uniformly amplifies the value of Big Data across your data fabric including working with data sets that are stored in Hadoop. This session will demonstrate how solutions from SAP and our Hadoop partners can help your organization seize the future, harness and gain unprecedented insight from Big Data.",
+    "speaker": "John Schitka",
+    "title": "Harness Data in Real-Time with Infinite Storage",
+    "type": "sponsor-talks"
+  },
+  {
+    "description": "Many companies desperately seek to find ?unicorns?, unique individuals with all the qualities a Data Scientist could have from strong tech skills, through excellent analytical capabilities, to a good business head. These people are however extremely rare, if existing at all. What business leaders need to understand is how to best compose a team by mixing and matching skill-sets and personalities. Using insight gained from working with Data Science training and recruitment, as well as from my background in academic research and financial services, I will present a strategy for building a data excellence team. Starting from the core skills required, I will synthesise these into the different roles and map these to the suitable backgrounds to consider for recruitment. These skills groups then have to be enveloped into a data ecosystem, with free and frequent communication and team spirit. I will give concrete advice on how to create and encourage this data team. Tools and techniques are only half of the solution to harvesting business value from data, the other half being the people using the tools. The ideas presented here are therefore more relevant than ever.",
+    "speaker": "Kim Nilsson",
+    "title": "How to Build a High-Performing Data Team",
+    "type": "hadoop-apps"
+  },
+  {
+    "description": "The Lambda Architecture has since gained traction, functioning as a blueprint to build large-scale, distributed data processing systems in a flexible and extensible manner. It turns out that there is a sometimes overlooked aspect of the Lambda Architecture: human fault tolerance. This talk aims to answers questions including: What Apache Hadoop eco-system components are useful for what layer in the Lambda Architecture? What is the impact on human fault tolerance? Are there good practices available for using certain Apache Hadoop ecosystem components in the three-layered Lambda Architecture?",
+    "speaker": "Michael Hausenblas",
+    "title": "Lambda Architecture or How I Learned to Stop Worrying and Love Human Fault Tolerance",
+    "type": "sponsor-talks"
+  },
+  {
+    "description": "In this talk I focus on a specific Hadoop application, image similarity search, and present our experience on designing, building and testing a Hadoop-based image similarity search scalable to terabyte-sized image collections. We start with overviewing how to adapt image retrieval techniques to MapReduce model. Second, we describe image indexing and searching workloads and show how these workflows are rather atypical for Hadoop. E.g., we explain how to tune Hadoop to fit to such computational tasks and particularly specify the parameters and values that deliver best performance. Next we present the Hadoop cluster heterogeneity problem and describe our solution to it by proposing a platform-aware Hadoop configuration. Then we introduce the tools, provided by the standard Apache Hadoop framework, useful for a large class of application workloads similar to ours, where a large-size auxiliary data structure is required for processing the dataset. Finally, we present a series of experiments conducted on four terabytes image dataset (biggest reported in the academic literature). Our findings will be shared as best practices and recommendations to the practitioners working with huge multimedia collections.",
+    "speaker": "Denis Shestakov",
+    "title": "Terabyte-scale image similarity search with Hadoop",
+    "type": "data-science"
+  },
+  {
+    "description": "Enterprises are using Hadoop for interactive real-time data processing via projects such as the Stinger Initiative. We describe two new HDFS features – Centralized Cache Management and Heterogeneous Storage – that allow applications to effectively use low latency storage media such as Solid State Disks and RAM. In the first part of this talk, we discuss Centralized Cache Management to coordinate caching important datasets and place tasks for memory locality. HDFS deployments today rely on the OS buffer cache to keep data in RAM for faster access. However, the user has no direct control over what data is held in RAM or how long it?s going to stay there. Centralized Cache Management allows users to specify which data to lock into RAM. Next, we describe Heterogeneous Storage support for applications to choose storage media based on their performance and durability requirements. Perhaps the most interesting of the newer storage media are Solid State Drives which provide improved random IO performance over spinning disks. We also discuss memory as a storage tier which can be useful for temporary files and intermediate data for latency sensitive real-time applications. In the last part of the talk we describe how administrators can use quota mechanism extensions to manage fair distribution of scarce storage resources across users and applications.",
+    "speaker": "Chris Nauroth, \u0010Arpit Agarwal",
+    "title": "Interactive Hadoop via Flash and Memory",
+    "type": "hadoop-futures"
+  },
+  {
+    "description": "Predictive Analytics has emerged as one of the primary use cases for Hadoop, leveraging various Machine Learning techniques to increase revenue or reduce costs. In this talk we provide real-world use cases from several different industries, including financial services, online advertising and retail. We then discuss the open source technologies and best practices for implementing Predictive Analytics with Hadoop, ranging from data preparation and feature engineering to learning and making real-time predictions. Some of the topics and technologies that will be covered include a deep dive on recommender systems that show cases the use of Mahout and Solr to deliver both batch and real-time solutions. The session also covers key operational considerations for effective model training and long-term business benefits.",
+    "speaker": "Michael Hausenblas",
+    "title": "Predictive analytics with Hadoop",
+    "type": "data-science"
+  },
+  {
+    "description": "SAP, Oracle ERP, etc., many business applications are capable of publishing change records without affecting application performance. Can these change records be used to create a latest snapshot of the data or a time-series application? Of-course, and it?s not that complicated. There are three important factors to consider. 1. Data collection of change records. 2. Organization of this data within HDFS 3. Processing of change records with latest snapshot. Many business applications either publishes object level change records or row level change records; it?s important to organize these change records with date-time information. A generic secondary sort map-reduce program can be written (Open source solutions is available) to compare last snapshot and change record to create new snapshot view of data. There can be only three kinds of transactions Insert, Update or Delete. Certain application can publish this indicator. When this indicator is available, Map-Reduce program can be very optimal; while in case of absence of this flag, comparison of old and new records can be expensive in computing while delivering the same results. We `ll also share some benchmark results for these algorithm in use at various clients.",
+    "speaker": "Sharad Varshney",
+    "title": "Time Machine for Business Application Data by Capturing, Organizing & Processing of Change Records",
+    "type": "operating-hadoop"
+  },
+  {
+    "description": "Let’s face facts. In order for Hadoop to gain the broad uptake it deserves, it will need to integrate with the mature BI systems already in place in organizations today. Your Data Warehouse is dying; Hadoop will elicit a material shift away from price per TB in persistent data storage. R, Python and Perl will replace SAS and other proprietary languages – how can you prepare for that change and better bring algorithms to large data sets (as opposed to the other way around) to make them work with hundreds or thousands of variables – and execute in real time. The key challenge for the next 18 months, as “Big Data` just becomes “Data” – business as usual – will be to make it a part of the BAU processes in organizations. That means everyone (even business users) will need to have a way to use it – without reinventing the way they interact with their current reporting and analysis. This means interactive analysis with existing tools. This means massively parallel code execution. And it needs to be tightly integrated with Hadoop.",
+    "speaker": "Sharon Kirkham",
+    "title": "Hadoop meets Mature BI: Where the rubber meets the road",
+    "type": "hadoop-apps"
+  },
+  {
+    "description": "Integrating a new technology such as Hadoop in the application infrastructure of a large bank is not an easy task. This presentation discusses the challenges involved in bringing a Hadoop based solution to production at a large bank in The Netherlands. More specifically we will cover how we dealt with various tollgates and risk management issues starting from hardware procurement to bring Hadoop service in production.",
+    "speaker": "Anurag Shrivastava",
+    "title": "Making bank predictive and real-time",
+    "type": "hadoop-apps"
+  },
+  {
+    "description": "At Spotify we collect huge volumes of data for many purposes. Reporting to labels, powering our product features, and analyzing user growth are some of our most common ones. Additionally, we collect many operational metrics related to the responsiveness, utilization and capacity of our servers. To store and process this data, we use scalable and fault-tolerant multi-system infrastructure, and Apache Hadoop is a key part of it. Surprisingly or not, Apache Hadoop generates large amounts of data in the form of logs and metrics that describe its behaviour and performance. To process this data in a scalable and performant manner we use … also Hadoop! During this presentation, I will talk about how we analyze various logs generated by Apache Hadoop using custom scripts (written in Pig or Java/Python MapReduce) and available open-source tools to get data-driven answers to many questions related to the behaviour of our 690-node Hadoop cluster. At Spotify we frequently leverage these tools to learn how fast we are growing, when to buy new nodes, how to calculate the empirical retention policy for each dataset, optimize the scheduler, benchmark the cluster, find its biggest offenders (both people and datasets) and more.",
+    "speaker": "Adam Kawa",
+    "title": "Hadoop operations powered by ... Hadoop",
+    "type": "operating-hadoop"
+  },
+  {
+    "description": "HBase, as a NoSQL database is extremely popular, and is getting adopted by major enterprises. In this talk, we will give a deeper user level and administrator level update on the new features in HBase. Examples of such features are, the much-more-enhanced client and server support for rolling upgrades, support for namespaces, cell-level security, compaction improvements, MTTR improvements, and some other prominent features. We will cover the migration process – how to safely go from an older release of HBase to the recent releases smoothly and with a minimum downtime for the applications. In addition, we will summarize our findings on the lesser exercised configurations of HBase – multiple RegionServers per node, using Bucket Cache, etc.",
+    "speaker": "Deveraj Das, Enis Soztutar",
+    "title": "HBase - a deeper dive into the recent developments",
+    "type": "hadoop-committer"
+  },
+  {
+    "description": "R is a popular open source programming language for statistical computing. This session will provide a technical review of how Hadoop can integrate with R. We will show how R users can seamlessly access and manipulate big data using R`s familiar programming syntax and paradigm. Users can perform tasks such as data transformations and exploration, statistical analysis, visualization, modeling, and scoring without resorting to map or reduce constructs or unfamiliar scripting languages. To show you how to tackle large data sets, we will share the latest capabilities to cleanly encapsulate data partitioning, along with the ability to push down and parallelize the execution of arbitrary R code fragments closer to the data.",
+    "speaker": "Steven Sit",
+    "title": "Analyzing big data with open source R and Hadoop",
+    "type": "data-science"
+  },
+  {
+    "description": "Every new version of HBase is better than the one before, and 0.96 is no exception, adding many new features and setting the stage for operational improvements such as “rolling upgrades”, without any downtime. This presentation will address all of the recent additions to HBase and explain what they mean to the HBase practitioner.",
+    "speaker": "Lars George",
+    "title": "HBase 0.96 - A report on the current status",
+    "type": "hadoop-committer"
+  },
+  {
+    "description": "HBase is a distributed, scalable, big data store that is often used as the database for real time, and near real time, Big Data applications. HBase availability disruptions result in non-responsive applications, data loss etc. In this presentation, the two main areas of HBase availability concerns, namely the Region Server and the HBase master are analyzed. The use of a Paxos based co-ordination system to provide multiple active Region Servers per Region is presented. The role of the HBase Master, and a robust system for providing multiple active HBase Masters are considered here.",
+    "speaker": "Konstantin Boudnik",
+    "title": "NonStop HBase – Making HBase Continuously Available for Enterprise Deployment",
+    "type": "sponsor-talks"
+  },
+  {
+    "description": "The set of algorithms that matter theoretically is different from the ones that matter commercially. Commercial importance often hinges on ease of deployment, robustness against perverse data and conceptual simplicity. Often, even accuracy can be sacrificed against these other goals. Commercial systems also often live in a highly interacting environment so off-line evaluations may have only limited applicability. I will describe several commercially important algorithms such as Thompson sampling (aka Bayesian Bandits), result dithering, on-line clustering and distribution sketches and will explain what makes these algorithms important in industrial settings.",
+    "speaker": "Ted Dunning",
+    "title": "How to Tell Which Algorithms Really Matter",
+    "type": "data-science"
+  },
+  {
+    "description": "Inotify, the change notification mechanism in modern Linux systems has considerably optimized Filesystem interactions. By being told on events than actively polling is not only efficient but also less resource consuming and more consistent. Such notification mechanisms for HDFS has been heavily discussed in the Hadoop community (HDFS-1742) but nothing has really materialized into a concrete implementation. As a matter of interest for us, this is a basic building block for rich features like near real-time data replication system or event based job scheduling, chaining (OOZIE-599). But then architecturally designing the Namenode responsible to provide such callbacks exposes to stability and scalability vulnerabilities. So, we approached this problem by decoupling the event detection mechanism from the Namenode and performing it asynchronously. In this way, these workflows become minimally intrusive to core Filesystem thereby not compromising stability as well as scale independently, while keeping predictable SLAs. In this talk, we will showcase our ongoing (open-source) work towards implementing one such loosely coupled architecture server using edit logs streamer or Quorum Journal listener. We would also demonstrate how a client can register callbacks, listen to any new file or given directory and leverage it further to perform near real-time cluster-to-cluster replication.",
+    "speaker": "Benoit Perroud, Hariprasad Kuppuswamy",
+    "title": "Hadoop Event Notification System",
+    "type": "hadoop-futures"
+  },
+  {
+    "description": "Deciding how and where to invest marketing euros is the oldest and main question in marketing. New analytics based on Hadoop architecture let now any company able to get an answer by empowering analysts with the capability to get insights from the massive data sets now available. A global top player operating in travel and leisure industry launched a big data initiative in order to drain the best value from the huge amount of data flooding the various marketing, sale and customer care departments. The initiative goal was clearly established: understanding the effectiveness of marketing campaign launched on different media/regions by correlating them with any resulting change in customers behavior measured at any company touch point. The technological approach lead to the build of a data lake where collecting structured and unstructured data rushing from several DWH, contact center platform, Google Analytics, file systems. Then analytical models has been deployed in Apache Hive to analyze increasing data traffic (contacts, inquiries, sales) by channel and understand correlation between campaign content and generated activity by channel. The definition of several KPIs to weight relationships occurring between business results and invested marketing campaign budget lead to the definition of an investment strategy by ROI.",
+    "speaker": "Nilo Calvi",
+    "title": "How Hadoop Can Help in Deciding Where to Better Invest your Marketing Budget",
+    "type": "hadoop-apps"
+  },
+  {
+    "description": "ebay has one of the largest Hadoop clusters in the industry with many petabytes of data. Over the past year we have been migrating our production clusters to Hadoop-2. In this talk we will be discussing the lesson learnt moving to Hadoop2 at such a large scale. We will also talk about how it is different to run Hadoop-2 from Hadoop-1 and what it takes to migrate your jobs to YARN. We will also share what are the contributions we did in terms of migrating from Hadoop-1 to Hadoop-2 and how it helped our migration. We will also discuss how our users are benefitting from Hadoop-2 and trying multiple new use cases, which were not possible in Hadoop-1. We will share the performance benchmarking results between Hadoop-1 and Hadoop-2. We will also share the production environment improvements due to Hadoop-2",
+    "speaker": "Mayank Bansal",
+    "title": "Hadoop-2 @ ebay",
+    "type": "operating-hadoop"
+  },
+  {
+    "description": "I/O time can dominate execution time for data-intensive cluster workloads because of the limitations of rotational storage media. This is true for workloads that express strong temporal or spatial locality, because Hadoop applications cannot effectively control their use of OS buffer cache or schedule their tasks for memory-locality. Thus, even with increasing per-server RAM capacity, applications are unable to achieve truly memory-speed computation. We provide new APIs in HDFS that allow applications to overcome these obstacles. This allows applications to explicitly pin important datasets into memory on HDFS datanodes, while exposing the location of pinned data on the namenode so applications can schedule for memory-locality. HDFS caching also opens up additional read-path optimizations: namely, transparent, safe, zero-copy reads of cached data. We will discuss the implementation of these new APIs, and show how applications like Impala and Hive can use them to achieve substantial performance improvements for real-world workloads. Furthermore, we discuss broader plans related to caching in HDFS, touching on topics like automatic cache replacement policies, resource management, and quality-of-service.",
+    "speaker": "Andrew Wang, Colin McCabe",
+    "title": "In-memory caching in HDFS: Lower latency, same great taste",
+    "type": "hadoop-committer"
+  },
+  {
+    "description": "At the core of the Criteo platforms, a set of prediction and recommendation algorithms crunch surf data collected on thousands of advertiser and publisher websites. Initially running on SQL-based architectures, these algorithms were ported on Hadoop in 2011 in order to open new scaling horizons. However, as the company continued to grow very quickly, so did the volume of data to store and process every day. As a consequence, Criteo had to scale its Hadoop cluster very rapidly from 12 to several hundred nodes. This created a lot of interesting and unexpected technical challenges covering every aspect of Hadoop: infrastructure as code and fully automated deployment with Chef software release management automation for multi-tenant cluster with 100+ developers performance tuning, scheduling and resource management devops style operations This presentation will leave no stone unturned and present real-life technical challenges and solutions. It should be of interest to any team trying to run and scale Hadoop in the real world? and hopefully it will help them avoid some pitfalls!",
+    "speaker": "Loic Le Bel, Jean-Baptiste Note",
+    "title": "Hadoop, from lab to turnkey deployed 24/7 production",
+    "type": "operating-hadoop"
+  },
+  {
+    "description": "In this talk, we describe an interesting methodology developed with Hadoop, Mahout, Hive and Cascading in order to help qualify user sessions on the web site. The main motivation is that web analytics tools fail to capture the diversity of navigation patterns on a typical website. The overall goal is to help product manager to create typologies of navigation patterns, such as “Home Page Wanderer”, “Fan that loves to tag and rate everything”, “Rebounder from coming Google Search”, …. The product manager can monitor the size and associated business metrics with each business class. In this approach, Hadoop is used in order to create user session from raw web log. Mahout Clustering is then used to identify likely users behaviours clusters. This clusters are then tagged manually by analysts, and simple supervised learning is used to classify and quantify user sessions on the long term. That`s a simple exemple that mix unsupervised and supervised at scale.",
+    "speaker": "Florian Douetteau",
+    "title": "Semi-Supervised Learning on User Web Sessions with Hadoop",
+    "type": "data-science"
+  },
+  {
+    "description": "The primary objective of Ambari is to simplify administration of Hadoop clusters. This entails addressing concerns like fault tolerance, security, availability, replication, zero touch automation and achieving all of this at enterprise scale. This talk focuses on key features that have been introduced in Ambari for cluster administration, and goes on to discuss existing concerns as well as future roadmap for the project. We will be demonstrating new features essential to managing enterprise scale clusters like rolling upgrade and rolling restart which provide admins the ability to manage clusters with zero down time. Other important features are heterogenous cluster configuration using config-groups, maintenance mode for services, components and hosts, bulk operations like decommission, recommission, and ability to visualize Hive queries in the Ambari Web UI which use Tez. Additionally we will show how Ambari facilitates adding new Services and extending existing stack with examples of Storm and Falcon. Lastly, we share how Ambari has been integrated with Microsoft System Center Operations Manager, Teradata Viewpoint, and RedHat GlusterFS.",
+    "speaker": "Sumit Mohanty, Yusaku Sako",
+    "title": "Simplifying Hadoop Administration with Ambari",
+    "type": "operating-hadoop"
+  },
+  {
+    "description": "Telecom service providers are embracing Hadoop aggressively in many parts of their business. This talk highlights real-world examples of use cases, showing how telcos capture the potential of big data across marketing, sales, service and network operations functions. The talk also includes a practical approach to execution, covering lessons learnt in areas like technology strategy, data lake target architecture and vendor selection. Overall, we will provide a CTO-level business technology perspective on Big Data for Telcos, drawing on the experience of Deutsche Telekom and other operators.",
+    "speaker": "Juergen Urbanski",
+    "title": "Monetizing Big Data at Telecom Service Providers",
+    "type": "hadoop-apps"
+  },
+  {
+    "description": "The topic of Security is often on the top of the agenda as Hadoop gains traction in enterprises. The distributed nature of Hadoop, a key for its success, poses unique challenges in securing it. Securing a client-server system is often easier since security controls can be placed at the service which is the single point of access. Security in Hadoop starts with enabling Kerberos to provide strong authentication. There are authentication, authorization, audit, encryption capabilities spread throughout projects that make up Hadoop. With Hadoop finding wider enterprise usage, there are additional demands on Hadoop security and it is evolving to provide more flexible authentication, and authorization, better data protection and wider support for existing Identity Management & security investments. This session is targeted to people interested in Hadoop security and provides on overview of upcoming Hadoop security projects.",
+    "speaker": "Vinay Shukla",
+    "title": "Hadoop Security: Today and Tomorrow",
+    "type": "operating-hadoop"
+  },
+  {
+    "description": "As technology further pervades organisations, each generates more data. Once harnessed, this data can enhance business, enabling growth. A new home for data has arrived to better support this: the Enterprise Data Hub, with Apache Hadoop at its centre. Cloudera and BT will discuss the trends that drive this and also explore the journey and the perspective of what might an Enterprise Data Hub look like in a Fortune 500 Enterprise.",
+    "speaker": "Doug Cutting, Phill Radley",
+    "title": "The Future of Data",
+    "type": "sponsor-talks"
+  },
+  {
+    "description": "Hadoop’s usage pattern, along with the underlying hardware technology and platform, are rapidly evolving. Further, cloud infrastructure, (public & private), and the use of virtual machines are influencing Hadoop. This talk describes HDFS evolution to deal with this flux. We start with HDFS architectural changes to take advantage of platform changes such as SSDs, and virtual machines. We discuss the unique challenges of virtual machines and the need to move MapReduce temp storage into HDFS to avoid storage fragmentation. Second we focus on realtime and streaming use cases and the HDFS changes to enable them, such as moving from node to storage locality, caching layers, and structure aware data serving. Finally we examine the trend for on-demand and shared infrastructure, where HDFS changes are necessary to bring up and later freeze clusters in a cloud environment. How will Hadoop and Openstack work together? While use cases such as spinning up development or test clusters are obvious, one needs to avoid resource fragmentation. We discuss the subtle storage storage problems their solutions. Another interesting use case we cover is Hadoop as a service supplemented by valuable data from the Hadoop service provider. Here we contrast a couple of solutions and their tradeoffs, including one that we deployed for a Hadoop service provider.",
+    "speaker": "Sanjay Radia",
+    "title": "BigData Trends and HDFS Evolution",
+    "type": "hadoop-committer"
+  },
+  {
+    "description": "Stratosphere (getstratosphere.org) is a next-generation Apache licensed platform for Big Data Analysis, and the only one originated in Europe. Stratosphere offers an alternative runtime engine to Hadoop MapReduce, but uses HDFS for data storage and runs on top of Yarn. Stratosphere features a scalable and very efficient backend, architected using the principles of MPP databases, but not restricted to the relational model or SQL. Stratosphere`s runtime streams data rather than processing them in batch, uses out-of-core implementations for data-parallel processing tasks, gracefully degrading to disk if main memory is not sufficient. Stratosphere is programmable via a Java or Scala API similar to Cascading, that include the common operators like map, reduce, join, cogroup, and cross. Analysis logic is specified without the need of linking user-defined functions. Stratosphere includes a cost-based program optimizer that automatically picks data shipping strategies, and reuses prior sorts and partitions. Finally, Stratosphere features end-to-end first class support for iterative programs, achieving similar performance to Giraph while still being a general (not graph-specific) system. Stratosphere is a mature codebase, developed by a growing developer community, and is currently witnessing its first commercial installations and use cases.",
+    "speaker": "Kostas Tzoumas, Stephan Ewen",
+    "title": "Big Data looks tiny from Stratosphere",
+    "type": "hadoop-futures"
+  },
+  {
+    "description": "In the era of Big Data, it is easy to get carried away by the hype and statements like one should collect and use all the data that is available. For data collection, with the falling prices of data storage, this seems to be a completely valid statement. However, different types of analytics methods have different scale economies, and they do not necessarily benefit from running on billions of records. This session brings several examples from the world of predictive analytics where a distributed large-scale implementation does not result in a better model, but it also mentions several algorithms and problems where there are clear advantages. It proposes a mental framework for critical thinking on analytics problems and their potential fit for distributed systems like Hadoop. The session also hints several rules of thumb to decide if a specific predictive analytics problem can benefit from a large-scale implementation.",
+    "speaker": "Zoltan Prekopcsak",
+    "title": "Economies and Diseconomies of Scale for Predictive Analytics",
+    "type": "data-science"
+  },
+  {
+    "description": "Apache Storm is a distributed, fault-tolerant, high-performance real-time computation system that provides strong guarantees on the processing of data. Similar to how Hadoop provides general primitives for doing batch processing, Storm provides a set of general primitives for doing real-time stream processing. The first part, we provide an in-depth look into Storm architecture. We will begin with an overview of Storm?s basic primitives (Tuple Streams, Spouts, and Bolts), detailing how they together provide fault-tolerance, and availability, and real-time data processing. Next we will cover the Trident API, a higher abstraction built on Storm`s core primitives, and how it provides stateful stream processing, joins, aggregations, groupings, functions, filters, and exactly-once semantics. Finally discuss common patterns and techniques for integrating Storm with technologies such as Hadoop, Kafka, Cassandra, and others as well as deployment scenarios and best practices. In the second part, we describe Storm integration with YARN. This brings batch and real-time stream processing together in a single infrastructure. This simplifies installation along with ability to run multiple Storm clusters on-demand in multi-tenant environments. Other benefits include inheriting from the Hadoop`s powerful storage subsystems such as HDFS and HBase, well understood security, and manageability.",
+    "speaker": "Taylor Goetz, Suresh Srinivas",
+    "title": "Real-Time Big Data: Storm Architecture and Integration Patterns",
+    "type": "hadoop-committer"
+  },
+  {
+    "description": "We hear about these real world examples how companies are bringing all of their various structured and unstructured data sources into one Hadoop environment, allowing more complex analytics, or just making traditional data processes more flexible and cheaper. But what if your processes needs single view of some entity among you whole dataset? Sometimes you really want to see all available information relevant to your customer/patient/car, or whatever entity is crucial for your business, no matter where the information came from ? that is why you brought the data in one place after all. There are no MDM solutions for Hadoop, therefore it is difficult to define these master views, or consolidated dimensions. Companies struggle with MDM even with normal-size, normal-structure data. Doing it on Hadoop may seem almost out of question. In this session, we will describe the basic approach towards MDM solution in Hadoop, common pitfalls, and Big Data specific MDM requirements that we have encountered in this past year among our customers from various business verticals. Presentation will include definition of all steps necessary for complete MDM solution and how they can be applied with distributed storage (HDFS), processing engine (MapReduce) and online accessible persistence layer (HBASE).",
+    "speaker": "Roman Kucera",
+    "title": "Using Hadoop as a platform for Master Data Management",
+    "type": "hadoop-apps"
+  },
+  {
+    "description": "Last year, Allen Wittenauer gave one of the most attended talks in Hadoop Summit history. It remains one of the most viewed sessions on Youtube. Attendees ended it with an extended Q&A session that lasted longer than the actual talk! This year we`re going to get him back up on stage in a special session so that you can get his unique perspective to your most pressing issues.",
+    "speaker": "Allen Wittenauer",
+    "title": "Let`s Talk Operations!",
+    "type": "operating-hadoop"
+  },
+  {
+    "description": "Genetic variants in patient?s germline DNA will increasingly be identified through next-gen sequencing technology. The magnitude of this data (several million variants per patient and several billions for groups of patients) will be challenging to store and analyze. The group comparison will estimate allelic or genotypic frequency differences between groups for all variants present in any individual in the analysis cohort. This involves parsing each individuals variant list, identifying all other individuals that share this variant, determining the frequency of the variant in each group, and applying an appropriate statistical test (e.g. Fisher?s Exact test, Cochran-Armitage test for trend) to determine whether the difference in frequency is statistically significant. To compare variant allele/genotype frequencies between groups, it is necessary to identify all individuals that share the allele, which requires rules to determine whether two variant alleles are the same. We store variants in Hadoop and perform Allelic Frequency analysis using MapReduce/Hadoop. We show that our solution using MapReduce/Hadoop scales out for thousands of patients having multiple genetic variants. For finding allelic frequencies and top-100 pvalues for two groups of variants, we present a MapReduce solution in two stages: the first stage finds all pvalues using Fisher?s Exact test and the second phase finds top-100 important pvalues.",
+    "speaker": "Mahmoud Parsian",
+    "title": "Finding Allelic Frequencies Using MapReduce/Hadoop",
+    "type": "data-science"
+  },
+  {
+    "description": "The HDFS namenode is approaching its vertical scalability limits. This particularly stems from using the namenode process in two disparate roles – filesystem namespace management and block allocation management. We present an implementation of a standalone block management service, which offloads both RAM and CPU pressure from the namenode machine. The footprint reduction exceeds 40% in systems with very small files, and grows to 65% with the block-to-file ratio. The block management service scales horizontally across multiple machines, and is capable of serving federated namenodes. It supports a high-availability mode, without burdening the system with any extra logging mechanisms. For efficiency of remote block management, we introduce fine-grained locking in the namenode — a generic facility that multiple performance optimizations can benefit from. Standalone block management goes beyond optimizing the traditional filesystem implementation. Exposing the block-level API opens the way to use HDFS as a block/object storage solution, thereby increasing its appeal to new classes of applications and services.",
+    "speaker": "Edward Bortnikov",
+    "title": "Standalone Block Management Service for HDFS",
+    "type": "hadoop-futures"
+  },
+  {
+    "description": "LinkedIn has several petabytes of data stored in multiple Hadoop clusters with several hundred users. During this talk, we cover our initiatives and lessons learned in securing Hadoop to meet enterprise security standards and thereby easing Hadoop adoption. We will discuss limitations in existing UNIX style file permissions in HDFS. We analyzed HDFS audit logs to define access groups and auto expiry of users from those groups. Also we will cover our proposed self-service fast user access tool with two-factor authentication allowing users quick access to the data. Additionally, we cover how headless accounts are treated and related auditing challenges. Next we go over Hive Server 2 and Apache Sentry, our initial thoughts on it, and our wish list of feature requirements. We will also cover a few attack scenarios and how they could be handled in Hadoop; For example, using techniques like sampling and scanning during data ingress to proactively detect and remove sensitive data. Finally, we will cover the work we are doing around Hadoop usage anomaly detection to identify attackers who are trying to gain access to sensitive data.",
+    "speaker": "Karthik Ramasamy",
+    "title": "Taking Hadoop to Enterprise Security Standards",
+    "type": "operating-hadoop"
+  },
+  {
+    "description": "Just as the survival of living species depends on the transfer of essential knowledge within the community and between generations, the availability and reliability of a distributed computer system relies upon consistent replication of core metadata between its components. This presentation will highlight the implementation of a replication technique for the namespace of the Hadoop Distributed File System (HDFS). In HDFS, the namespace represented by the NameNode is decoupled from the data storage layer. While the data layer is conventionally replicated via block replication, the namespace remains a performance and availability bottleneck. Our replication technique relies on quorum-based consensus algorithms and provides an active-active model of high availability for HDFS where metadata requests (reads and writes) can be load-balanced between multiple instances of the NameNode. This session will also cover how the same techniques are extended to provide replication of metadata and data between geographically distributed data centers, providing global disaster recovery and continuous availability. Finally, we will review how consistent replication can be applied to advance other systems in the Apache Hadoop stack; e.g., how in HBase coordinated updates of regions selectively replicated on multiple RegionServers improve availability and overall cluster throughput.",
+    "speaker": "Konstantin Shvachko",
+    "title": "Coordinating Metadata Replication: Survival Strategy for Distributed Systems",
+    "type": "hadoop-committer"
+  },
+  {
+    "description": "Microsoft has been focused on deeply integrating Hadoop with your existing IT data center investments including with the relational data warehouse.  Come to this session to learn how Microsoft allows you co-locate a Hadoop implementation in the same server as your data warehouse and how your BI users can query both tables from your relational warehouse and HDFS using familiar T-SQL statements (from their preferred BI tool).  Not simply providing a relational view over HDFS, Microsoft splits the query and convert SQL to MapReduce to execute directly on the Hadoop cluster (for up to 10x performance gains).  Learn how you can deploy this seamless integration between Hadoop and your relational data warehouse in this session.",
+    "speaker": "Dragan Tomic",
+    "title": "Deeply integrate Hadoop with your relational data warehouse",
+    "type": "sponsor-talks"
+  },
+  {
+    "description": "Hadoop is the transformational technology of our generation. Hadoop is not transformational because its bigger/faster/cheaper/better than traditional technologies (although it is!!), it is transformational because it has fundamentally altered the cost and risk profile of building data platforms at scale. This enables businesses to monetise data and develop product that, just a few years ago, would have been deemed high risk or too costly on traditional data platforms. Hadoop has cut the cost of entry for businesses seeking to develop data products to such an extent that in the future we doubt anyone will get fired for choosing Hadoop. We have developed an economic model for Total Cost of Data alongside the technical plans you would expect of a large enterprise rolling out a new technology. The model has helped us sell the benefits of the technology to our business community as the cost of entry and failure has reduced to the extent where fear of the new is eliminated – the invisible hand. Our model articulates the hyper-deflation in data storage and processing costs as well as the revolution in data driven development that completely alters the decision process when thinking of how we develop data products.",
+    "speaker": "Alasdair Anderson",
+    "title": "Hadoop-enomics, the invisible hand of big data",
+    "type": "hadoop-apps"
+  },
+  {
+    "description": "Misconfigurations and bugs break the most Hadoop clusters. Fixing misconfigurations is up to you. Attend this session and leave with the know-how to get your configuration right the first time.",
+    "speaker": "Kathleen Ting",
+    "title": "7 Deadly Hadoop Misconfigurations",
+    "type": "operating-hadoop"
+  },
+  {
+    "description": "Apache Mahout is undergoing some dramatic changes as we drive towards a 1.0 release with a revitalized community. Some of the changes include radical deletion of unused or unmaintained code. Some of the changes include new capabilities or provide new potential. Some of the new capabilities include a frame work for deploying high quality real-time recommendations via a search engine such as Apache Solr/Lucene. This allows you to capitalize on the superb deployability and bulletproof reliability of Solr/Lucene, while getting the benefits of integrated search and recommendations. Another new capability that has the potential to radically improve Mahout is a recent Scala binding. This preserves the best parts of Mahout`s math library, but allows algorithms to be coded almost as concisely as with R or Matlab. Hundreds of lines of code become dozens. This binding also allows interactive use of Mahout. Finally, there are improvements and extensions to the basic mathematical and statistical capabilities of Mahout including substantial performance improvements. I will describe these developments and, if time permits, demonstrate some of them.",
+    "speaker": "Ted Dunning",
+    "title": "Apache Mahout - Verging on 1.0 with New Capabilities",
+    "type": "hadoop-committer"
+  },
+  {
+    "description": "Apache Hive provides a convenient SQL query engine and table abstraction for data stored in Hadoop. Hive uses Hadoop to provide highly scaleable bandwidth to the data, but does not support updates, deletes, or transaction isolation. This has prevented many desirable use cases, such as updating of dimension tables or doing data clean up. We are implementing the standard SQL commands insert, update, and delete allowing users to insert new records as they become available, update changing dimension tables, repair incorrect data, and remove individual records. Additionally, we will add ACID compliant snapshot isolation between queries so that queries will see a consistent view of the committed transactions when they are launched regardless of whether they are a single or multiple MapReduce jobs. This talk will cover the intended use cases, architectural challenges of implementing updates and deletes in a write once file system, performance of the solution, as well as details of changes to the file storage formats and transaction management system.",
+    "speaker": "Owen O'Malley, Alan Gates",
+    "title": "Adding ACID Transactions, Inserts, Updates, and Deletes in Apache Hive",
+    "type": "hadoop-committer"
+  },
+  {
+    "description": "Energy conservation is a focus area of utility companies across the world. The emergence of smart grids through the deployment of smart meters has resulted in availability of huge energy consumption data. This data can be analyzed to provide insights into energy conservation measures and initiatives. Utility companies are harnessing this data to gain unprecedented insights into customer usage patterns. Performing analytics on this multi-source data promises utility companies accurate prediction of energy demand and implementation of time-of-use tariff plans. Traditional RDBMS of utility companies is a bottleneck in executing this approach. These databases do not support real-time decision making and need high capital investment in data storage systems. Our paper showcases a BI tool using Apache Hadoop to efficiently tackle the above mentioned problems. Using this tool, utility companies can save a lot of money by using community hardware that runs Hadoop. Further, the usage of distributed computing tools also reduces the processing time significantly to enable real-time monitoring and decision making. The deployment of this tool will also reduce carbon footprint and other problems in energy distribution including theft and losses. Based on pilot studies futuristic use cases are also provided for utilities such as gas and water.",
+    "speaker": "Omkar Nibandhe, Abhishek Korpe",
+    "title": "Smart meter data analytic using hadoop",
+    "type": "hadoop-apps"
+  },
+  {
+    "description": "Traditionally, TV scheduling, content acquisition and advertising is based on broad statistics over the entire viewership as a few segments. With smart TVs and set-top boxes, it is possible to provide similar level of personalisation as websites on TV. However, one key element to achieve this level of personalisation is to gain refined understanding of viewing patterns and behaviour of micro-segments of viewers. Here we explore a way to use advanced segmentation, modelling and predictive techniques, like time series analysis and clustering, that can be applied to disaggregate device level TV viewership data to obtain fine-grained personalised viewership profiles, that can be used to personalise everyday TV viewing experience and better target advertisements to the user profile of the individual viewer. Today, set-top boxes generate quite a lot of data; this is captured only at the device level which can be shared across multiple users. In this session, we introduce an approach to develop viewership ?fingerprints? for disjoint micro-segments of viewers. We illustrate how these fingerprints can then be used to disaggregate device level data to (1) identity user segments within a household, and (2) create personalised profiles for each individual watching a device.",
+    "speaker": "Ranadip Chatterjee, Tamas Jambor",
+    "title": "Personalizing Live TV",
+    "type": "data-science"
+  },
+  {
+    "description": "XING AG is the leading professional social network in German speaking countries with more than 14 Million users. Being one of the first European companies that is running a Hadoop 2.0 cluster, we exploit YARN in order to better utilize the existing cluster hardware. We will give insights into how we use YARN to deploy services and applications ad-hoc for testing, data analysis and data ingestion. As we are using Scala as our primary development language, this talk will focus on deploying applications using the Typesafe stack. Our applications include recommender systems that are implemented using the Play Framework and Akka of the Typesafe Stack as well as Elastic Search, Flume and specialized in-memory databases that capture XING`s social graph. Moreover, we will take a look at current shortcomings of YARN and discuss possible improvements.",
+    "speaker": "Moritz Uhlig",
+    "title": "YARN at XING: Ad-hoc Deployment of Scala Applications",
+    "type": "operating-hadoop"
+  },
+  {
+    "description": "Apache Tez is a modern data processing engine designed for YARN on Hadoop 2. Tez aims to provide high performance and efficiency out of the box, across the spectrum of low latency queries and heavy-weight batch processing. It provides a sophisticated topology API, advanced scheduling and concurrency control & proven fault tolerance. The talk will elaborate on these features via real use cases from early adopters like Hive, Pig and Cascading. We will show examples of using the Tez API for targeting new & existing applications to the Tez engine. Finally we will provide data to show the robustness and performance of the Tez platform so that users can get on-board with confidence.",
+    "speaker": "none",
+    "title": "Apache Tez - A New Chapter in Hadoop Data Processing",
+    "type": "hadoop-committer"
+  },
+  {
+    "description": "We are surrounded by graphs. Graphs are used in various domains, such as the Internet, social networks, transportation networks, bioinformatics etc. They are successfully used to discover communities, to detect frauds, to analyse the interactions between proteins, to uncover social behavioral patterns. As these graphs grow larger and larger, no single computer can timely process this data anymore. Apache Giraph is a large-scale graph processing system that can be used to process Big Graphs. Giraph is part of the Hadoop ecosystem, and it is a loose open-source implementation of the Google Pregel system. Originally developed at Yahoo!, it is now a top top-level project at the Apache Foundation, and it enlists contributors from companies such as Facebook, LinkedIn, and Twitter. In this talk we will present the programming paradigm and all the features of Giraph. In particular, we focus on how to write Giraph programs and run them on Hadoop. Also, we discuss how to integrate Giraph with the other team mates of the Hadoop ecosystem.",
+    "speaker": "Claudio Martella",
+    "title": "Apache Giraph: large-scale graph processing on Hadoop",
+    "type": "hadoop-committer"
+  }
+]
