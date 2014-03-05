@@ -23,7 +23,7 @@
           $http.get('hadoop-summit.json')
           .success(function(res){
                     $scope.tracks = res.data;
-                    log(res.data);            
+                    console.log(res.data);       
           });
      }
       
