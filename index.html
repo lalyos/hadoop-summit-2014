@@ -17,8 +17,41 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap.min.js"></script>
     <script>
      function SummitController($scope,$http) {
-          $scope.todos = [{text:'learn angular', done:true},
-              {text:'build an angular app', done:false}];
+          $scope.showOnly = 'all';
+          $scope.topics = [
+            {
+              "name": "Hadoop for Business Apps",
+              "id": "hadoop-apps"
+            },
+            {
+              "name": "Committer",
+              "id": "hadoop-committer"
+            },
+            {
+              "name": "Future of Hadoop",
+              "id": "hadoop-futures"
+            },
+            {
+              "name": "Deployment and Operations",
+              "id": "operating-hadoop"
+            },
+            {
+              "name": "Sponsor Talks",
+              "id": "sponsor-talks"
+            }            
+          ];
+          
+          $scope.setFilter = function(showOnly) {
+            $scope.showOnly = showOnly;
+          }
+
+          $scope.filterTracks = function(track) {
+            if ($scope.showOnly == 'all') {
+              return true;
+            }
+            return track.type == $scope.showOnly;
+          }
+          
           
           $http.get('hadoop-summit.json')
           .success(function(data){
@@ -53,11 +86,22 @@
     </div>
 
     <div class="container">
-      <h3>Tracks</h3>
+      <h3>Tracks selected: {{showOnly}}</h3>
+      <div class="btn-group">
+        <button type="button" class="btn btn-default" ng-click="setFilter('all')">Show All</button>
+      </div>
+      <div class="btn-group">
+        <button type="button" class="btn btn-default" ng-repeat="topic in topics" ng-click="setFilter(topic.id)">{{topic.name}}</button>
+      </div>
       <div>
-        <ul ng-repeat="track in tracks">
-          <li>{{track.title}}</li>
-        </ul>
+        <div class="list-group">
+          <a href="#" class="list-group-item" ng-repeat="track in tracks | filter: filterTracks">
+            <span class="badge">{{$index}}</span>
+            <h4 class="list-group-item-heading">{{track.title}} ({{track.speaker}})</h4>
+            <p class="list-group-item-text">{{track.description}}</p>
+          </a>
+        </div>
+        
       </div>
     </div><!-- /.container -->
 
