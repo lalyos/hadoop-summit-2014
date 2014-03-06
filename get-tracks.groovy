@@ -45,3 +45,7 @@ plist.each{trackDiv ->
 }
 
 json = new groovy.json.JsonBuilder()
+json tracks
+
+file = new File("summit.json")
+file << json.toString()
