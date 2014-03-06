@@ -117,7 +117,9 @@
         <button type="button" class="btn btn-default" ng-click="setFilter('all')">Show All</button>
       </div>
       <div class="btn-group">
-        <button type="button" class="btn btn-default" ng-repeat="topic in topics" ng-click="setFilter(topic.id)">{{topic.name}}</button>
+        <button type="button" class="btn btn-default" ng-repeat="topic in topics" ng-click="setFilter(topic.id)"> 
+          <span ng-class="topic.id" >{{topic.name}}</span>
+        </button>
       </div>
       <div>
         <div class="list-group">
