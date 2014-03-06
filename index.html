@@ -10,6 +10,28 @@
     body {
       padding-top: 50px;
     }
+    .hadoop-apps {
+      background: #FFC873;
+    }
+    .hadoop-committer {
+      background: #FF6600;
+    }
+    .hadoop-futures {
+      background: #00ff00;
+    }
+    .operating-hadoop {
+      background: lightgreen;
+      color: white;
+      text-decoration: none;
+    }
+    .data-science {
+      background: #ffa1c2;      
+    }
+    .sponsor-talks {
+      background: bisque;
+    }
+    
+    #ffa1c2
     </style>
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
     
@@ -34,6 +56,10 @@
             {
               "name": "Deployment and Operations",
               "id": "operating-hadoop"
+            },
+            {
+              "name": "Data Science",
+              "id": "data-science"
             },
             {
               "name": "Sponsor Talks",
@@ -97,7 +123,7 @@
         <div class="list-group">
           <a href="#" class="list-group-item" ng-repeat="track in tracks | filter: filterTracks">
             <span class="badge">{{$index}}</span>
-            <h4 class="list-group-item-heading">{{track.title}} ({{track.speaker}})</h4>
+            <h4 class="list-group-item-heading" ng-class="track.type">{{track.title}} ({{track.speaker}})</h4>
             <p class="list-group-item-text">{{track.description}}</p>
           </a>
         </div>
